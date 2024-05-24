@@ -1,0 +1,224 @@
+.main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 10px;
+  }
+
+.vertical-align {
+    box-sizing: border-box;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 17px;
+  }
+
+.icon {
+    float: left;
+    margin-top: 6px;
+    margin-left: 7px;
+    color: black;
+    font-size: 50px;
+}
+
+.Search {
+    border-radius: 30px;
+    margin-top: 10px;
+    padding: 14px;
+    text-indent: 5px;
+    font-size: 15px;
+    width: 63%;
+    border: none;
+    background-color: #f3f3f5;
+}
+
+.nav {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.site-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+.site-title:hover {
+    text-decoration: underline;
+    text-underline-offset: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content p {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.img {
+    background-image: url("https://pos.nvncdn.com/822bfa-13829/art/artCT/20201227_YDjfOG6soRObqfBBcmqStk7A.jpg");
+    width: 18rem;
+    height: 3.3rem;
+    background-size: cover;
+    background-position: left;
+    filter: brightness(0.8);
+    border-radius: 6px;
+    margin-top: 25px;
+}
+
+.img p {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.boots {
+    box-sizing: border-box;
+    background-color: #f7f8f9;
+    border: 1px solid #e5e7eb;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-left: -20px;
+    text-indent: 20px;
+    padding: 10px;
+    width: 100vw;
+}
+
+.boots span {
+    margin-left: 15px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+}
+
+.brand-section {
+    margin-top: -155px;
+}
+
+.brand-section > p {
+    margin-left: 350px;
+}
+
+.row {
+    font-size: 13px;
+    margin-top: 140px;
+}
+
+.row p {
+    padding-top: 50px;
+}
+
+.column {
+    margin-right: 30px;
+    margin-bottom: 80px;
+    padding: 30px;
+    float: left;
+    height: 170px;
+    width: 160px;
+    text-align: center;
+    background-color: #f7f8f9;
+}
+
+.featured-products {
+    align-items: center;
+}
+.image {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: none;
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f7f7f7;
+    margin-bottom: 80px;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+    clip-path: inset(30% at center);
+    background-color: transparent;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #efefef;
+    margin-top: 80px;
+    height: 38rem;
+}
+
+.options-container {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.options-container img {
+    display: flex;
+}
+
+.button {
+    padding: 9px 18px; 
+    background:#ffac00; 
+    border:none;
+    border-radius:7px; 
+    margin-top: 30px;
+}
+
+.options-container button:hover {
+    background-color: #ffb826;
+}
+
+.caption {
+    margin: 200px 50px 0px 20px;
+    max-width: 50em;
+    word-wrap: break-word;
+    text-align: center;
+}
+
