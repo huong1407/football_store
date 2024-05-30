@@ -1,0 +1,21 @@
+.recommender {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .picture {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .picture img {
+    width: 100%;
+    height: auto;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+  }

@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Homepage.css";
-import Marquee from "react-fast-marquee";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { GoClockFill, GoTag } from "react-icons/go";
-import { MdPeopleAlt, MdArrowOutward  } from "react-icons/md";
+import { MdPeopleAlt, MdArrowOutward } from "react-icons/md";
 import { FaTruck } from "react-icons/fa";
 import { GiRecycle } from "react-icons/gi";
 import { IoFootballOutline } from "react-icons/io5";
@@ -11,44 +10,41 @@ import { ImSearch } from "react-icons/im";
 import { AiOutlineUser, AiOutlineHome } from "react-icons/ai";
 import { TbShoppingBag } from "react-icons/tb";
 import Product from "./Product";
+import Slideshow from "./Slideshow";
+import Recommended from "./Recommended";
 
 function Homepage() {
-  // const [product, setProduct] = useState([]);
-  // const [boots, setBoots] = useState('');
-  // const [gloves, setloves] = useState('');
-  // const [ball, setBall] = useState('');
-  // const [shirt, setShirt] = useState('');
-  // const [search, setSearch] = useState('');
-
-  // const filter = product
-
   return (
     <div className="main">
-      <Marquee className="header" speed={60} style={{overflow:'hidden'}}>
-        <p><GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
-        <p><GoClockFill /> Delivery within 5-7 working days</p>
-        <p><MdPeopleAlt /> Member benefits </p>
-        <p><FaTruck /> Shipping your order to Vietnam </p>
-      </Marquee>
+      <div className="header">
+        <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
+        <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
+        <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
+        <p className="banner-text"> <FaTruck /> Shipping your order to Vietnam</p>
+      </div>
+      
 
-      <div className="vertical-align">
-        
-        <Link to ="/"><IoFootballOutline className="icon"/></Link>
-        {/* <p>Fútbol Emotion</p> */}
+      <div className="navbar">
+        <div className="vertical-align">
+          <Link to="/">
+            <IoFootballOutline className="icon" />
+          </Link>
+          {/* <p>Fútbol Emotion</p> */}
 
-        <form>
-          <input className="Search" type="text" placeholder="What are you looking for?"/>
-          <button type="submit" style={{border: 'none', backgroundColor: '#f3f3f5', fontSize: '15px', transform: 'translateX(-37px)', cursor:'pointer'}}> <ImSearch/> </button>
-        </form>
+          <form className="form">
+            <input className="Search" type="text" placeholder="What are you looking for?"/>
+            <button type="submit" style={{border: 'none', backgroundColor: '#f3f3f5', fontSize: '13px', transform: 'translateX(-38px)', cursor:'pointer'}}> <ImSearch/> </button>
+          </form>
 
-        <Link to='/login' style={{color:'black', textDecoration:'none', float: 'right', transform:'translate(-100px, -47px)'}}>
-          <AiOutlineUser style={{fontSize:'25px',}}/>
+        <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(5em)'}}>
+          <AiOutlineUser style={{fontSize:'25px'}}/>
           <p style={{ fontSize:'1px'}}>Log in</p>
         </Link>
-        <Link style={{color:'black', textDecoration:'none', float: 'right', transform:'translate(0px, -47px)'}}>
+        <Link style={{color:'black', textDecoration:'none', transform:'translateX(7em)'}}>
           <TbShoppingBag style={{fontSize:'25px'}}/>
           <p style={{ fontSize:'0.2px'}}>My cart</p>
         </Link>
+        </div>
         
         <div className="nav">
           <div className="dropdown">
@@ -90,15 +86,19 @@ function Homepage() {
           <Link to="/lifestyle" className="site-title"> Lifestyle </Link>
           <Link to="/accessories" className="site-title"> Accessories </Link>
           <Link to="/kids" className="site-title"> Kids </Link>
-          <Link to="/sales" className="site-title"> Sales </Link>
+          <Link to="/sales" className="site-title" style={{color:'red'}}> Sales </Link>
 
-          <ul style={{marginLeft: '38%', marginRight: '-4%'}}>
+          <ul style={{marginLeft: '40%', marginRight: '1%'}}>
             <li><Link className="site-title"> Club's Kits </Link></li>
             <li><Link className="site-title"> Blogs </Link></li>
           </ul>
+        </div>
+        
       </div>
-      </div>
-      <Product />
+      <Slideshow />
+      <><Product /></>
+      
+      <Recommended />
     </div>
   );
 }
