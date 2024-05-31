@@ -77,7 +77,7 @@ function Product() {
       </div>
 
       <div className="featured-products">
-        <p style={{ fontSize: "28px", fontWeight: "bold", letterSpacing: "3px", textAlign:'center' }}>
+        <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}>
           FEATURED PRODUCTS
         </p>
         <div className="image">
@@ -179,7 +179,7 @@ function Product() {
       </div>
 
       <div>
-        <p style={{ fontSize: "28px", fontWeight: "bold", letterSpacing: "3px", textAlign:'center' }}> WHICH BOOTS OR GLOVES SHOULD I GET? </p>
+        <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> WHICH BOOTS OR GLOVES SHOULD I GET? </p>
         <div className="options">
           <div className="option-container">
             <p className="caption">

@@ -13,6 +13,7 @@ body {
   background-color: black;
   color: white;
   position: relative;
+  justify-content: center;
 }
 
 .banner-text {
@@ -21,6 +22,7 @@ body {
   width: 100%; 
   white-space: nowrap;
   animation: slideIn 4s forwards;
+  text-align: center;
 }
 
 .banner-text:nth-child(1) {
@@ -133,7 +135,6 @@ button {
   display: none;
   position: absolute;
   background-color: #ffffff;
-  min-width: 160px;
   z-index: 1;
 }
 
@@ -271,10 +272,13 @@ button {
 
 .caption {
   max-width: 40em;
-  word-wrap: break-word;
+  word-wrap: keep-all;
   text-align: center;
   line-height: 1.6;
   padding-top: 13rem;
+  margin-left: 1rem;
+  text-align-last: center;
+  font-family: Calibri;
 }
 
 .click {
@@ -282,7 +286,7 @@ button {
   background-color:#ffac00; 
   border:none;
   border-radius: 0.5rem;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 .click a {

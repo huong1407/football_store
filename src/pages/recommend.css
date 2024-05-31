@@ -1,21 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
 .recommender {
-    text-align: center;
-    margin: 20px 0;
-  }
+  float: left;
+}
   
-  .picture {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
-  }
-  
-  .picture img {
-    width: 100%;
-    height: auto;
-  }
-  
-  a {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-  }
+.gallery {
+  border: 1px solid #ccc;
+}
+
+.gallery:hover {
+  border: 4px solid #777;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

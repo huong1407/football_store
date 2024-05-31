@@ -1,0 +1,210 @@
+.motion {
+    padding: 0 10px;
+    margin-right: 100px;
+    float: left;
+    width: 24.99999%;
+}
+
+.motion a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.motion-box {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    align-items: center;
+    color: white; 
+    box-sizing: border-box; 
+    background: #222;
+}
+
+.comment {
+    word-break: keep-all;
+    width: 34rem;
+    text-align: left;
+    color: #6c757d;
+    margin: 1rem 0;
+    line-height: 1.6;
+    font-size: 0.4rem;
+    font-family: Calibri;
+}
+
+.comment span {
+    color: #FFAC00;
+    cursor: pointer;
+}
+
+.comment span:hover {
+    color: #cc8a00;
+}
+
+.motion-network {
+    position: absolute;
+    margin-top: 39rem;
+    margin-bottom: 30rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background-color: #f7f8f9;
+    text-align: center;
+}
+
+.motion-network ul {
+    padding: 0 15rem;
+    margin: 1rem;
+    display: flex;
+    gap: 29rem;
+}
+
+.network-link {
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    position: relative;
+}
+
+.customer-review {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 53rem;
+    height: 13rem;
+    font-family: Calibri;
+}
+
+.rating {
+    position: absolute;
+    margin-left: 10px;
+    width: 9rem;
+    height: 12rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: #222222;
+}
+
+.rating a {
+    color: white;
+}
+
+.star {
+    cursor: pointer;
+    display: inline-block;
+    color: #FFAC00;
+    margin: 0 1px;
+    transform: translateY(-320%);
+}
+
+.customer-inline {
+    display: inline-block;
+}
+
+.progress {
+    cursor: pointer;
+    height: 5px;
+    width: 200px;
+    background-color: #FFAC00;
+    border-radius: 30px;
+    border: 3px solid white;
+    display: inline-block;
+    margin-left: 2rem;
+    float: right;
+}
+
+.last-opinions {
+    display: flex;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    width: 65rem;
+    border-radius: 5px;
+    text-align: left;
+    line-height: 1.3rem;
+    text-indent: 10px;
+}
+
+.about-us {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-top: 5rem;
+    height: 20rem;
+    padding: 5rem 1rem;
+    background-image: url(https://www.futbolemotion.com/imagescontenidos/footer/index.jpg);
+}
+
+.about-us h1 {
+    font-weight: bold;
+    font-family: Verdana;
+    color: white;
+    text-align: left;
+}
+
+.about-us p {
+    font-family: Calibri;
+    color: white;
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+.brand {
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    background-color: #f7f8f9;
+    font-size: 5rem;
+    height: 6.5rem;
+    padding: 0.7rem 2rem;
+}
+
+.brand a {
+    margin-right: 15rem;
+    margin-left: 5rem;
+    color: #6c757d;
+}
+.brand a:hover {
+    color: #495057;
+}
+
+.items {
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    background-color: #f7f8f9;
+    height: 20rem;
+    padding: 0.7rem 1rem;
+    font-family: Calibri;
+}
+
+hr {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    border-style: inset;
+    border-width: 1px;
+}
+
+table {
+    text-align: left;
+}
+
+td {
+    padding-top: 12px;
+    padding-right: 12rem;
+}
+
+td a {
+    color: black;
+    text-decoration: none;
+}
+td a:hover {
+    text-decoration: underline;
+}
+
+.link-hover:hover {
+    color: #d5d4da;
+}

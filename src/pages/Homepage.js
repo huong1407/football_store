@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
 import { GoClockFill, GoTag } from "react-icons/go";
@@ -11,12 +11,27 @@ import { AiOutlineUser, AiOutlineHome } from "react-icons/ai";
 import { TbShoppingBag } from "react-icons/tb";
 import Product from "./Product";
 import Slideshow from "./Slideshow";
-import Recommended from "./Recommended";
+// import Recommended from "./Recommended";
+import Motion from "./Motion";
+import FooterBar from "./FooterBar";
 
 function Homepage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const savedVisibility = localStorage.getItem('notificationVisible');
+    if (savedVisibility !== null) {
+      setIsVisible(JSON.parse(savedVisibility));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('notificationVisible', JSON.stringify(isVisible));
+  }, [isVisible]);
+
   return (
     <div className="main">
-      <div className="header">
+        <div className="header">
         <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
         <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
         <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
@@ -96,9 +111,11 @@ function Homepage() {
         
       </div>
       <Slideshow />
-      <><Product /></>
+      <Product />
       
-      <Recommended />
+      {/* <Recommended /> */}
+      <Motion />
+      <FooterBar />
     </div>
   );
 }
