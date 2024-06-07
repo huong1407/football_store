@@ -44,6 +44,7 @@ select:active {
 
 .footer-inline button {
     background-color: #e7e7e7;
+    color: black;
     padding: 11px;
     font-size: 0.5rem;
     font-weight: bold;

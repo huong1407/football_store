@@ -2,14 +2,14 @@
     padding: 0 10px;
     margin-right: 100px;
     float: left;
-    width: 24.99999%;
+    width: 26%;
+    margin-top: 20px;
 }
-
 .motion a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    
+    text-align: left;
 }
 
 .motion-box {
@@ -55,12 +55,16 @@
     background-color: #f7f8f9;
     text-align: center;
 }
-
 .motion-network ul {
     padding: 0 15rem;
     margin: 1rem;
     display: flex;
     gap: 29rem;
+}
+.motion-network a {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
 }
 
 .network-link {
@@ -100,7 +104,7 @@
     display: inline-block;
     color: #FFAC00;
     margin: 0 1px;
-    transform: translateY(-320%);
+    transform: translateY(-250%);
 }
 
 .customer-inline {
@@ -109,7 +113,6 @@
 
 .progress {
     cursor: pointer;
-    height: 5px;
     width: 200px;
     background-color: #FFAC00;
     border-radius: 30px;
@@ -117,17 +120,21 @@
     display: inline-block;
     margin-left: 2rem;
     float: right;
+    padding: 5px;
+    margin-top: 6px;
 }
 
 .last-opinions {
-    display: flex;
     box-sizing: border-box;
     border: 1px solid #e5e7eb;
     width: 65rem;
+    height: 7rem;
     border-radius: 5px;
     text-align: left;
     line-height: 1.3rem;
     text-indent: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 .about-us {
@@ -160,12 +167,16 @@
     font-size: 5rem;
     height: 6.5rem;
     padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Space items evenly */
 }
 
 .brand a {
     margin-right: 15rem;
     margin-left: 5rem;
     color: #6c757d;
+    display: inline;
 }
 .brand a:hover {
     color: #495057;

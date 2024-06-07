@@ -9,71 +9,72 @@ import { SiPuma, SiJordan, SiNewbalance } from "react-icons/si";
 const Motion = () => {
     return (
         <div>
-            <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> THE LATEST AT @FUTBOLEMOTION </p>
-
-            <div className="motion">
-                <Link 
-                to="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.webp" 
-                target="_blank">
-                    <div style={{position: 'relative'}}>
-                        <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.jpg" alt="" />
-                        <button className="motion-box">Boots</button>
-                    </div>
+            <div>
+                <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> THE LATEST AT @FUTBOLEMOTION </p>
+                <div className="motion">
+                    <Link 
+                    to="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.webp" 
+                    target="_blank">
+                        <div style={{position: 'relative'}}>
+                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.jpg" alt="" />
+                            <button className="motion-box">Boots</button>
+                        </div>
                     
                     <br /> Nike presents the new "Rising Gem Pack"     
-                </Link>
-                <p className="comment"> A new pack from the American brand that aims to focus on young players, 
-                    those new gems emerging in the world of football who will wear the swoosh. 
-                    Let's delve into all the details.</p>
+                    </Link>
+                    <p className="comment"> A new pack from the American brand that aims to focus on young players, 
+                        those new gems emerging in the world of football who will wear the swoosh. 
+                        Let's delve into all the details.</p>
 
-                <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> May 12 </span>
-            </div>
+                    <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> May 12 </span>
+                </div>
 
-            <div className="motion">
-                <Link
-                to="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg"
-                target="_blank">
-                    <div style={{position:'relative'}}>
-                        <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg" alt="" />
-                        <button className="motion-box">Boots</button>
-                    </div>
+                <div className="motion">
+                    <Link
+                    to="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg"
+                    target="_blank">
+                        <div style={{position:'relative'}}>
+                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg" alt="" />
+                            <button className="motion-box">Boots</button>
+                        </div>
                     
-                    <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
-                </Link>
-                <p className="comment"> Introducing the new Nike Tiempo Legend X Emerald, 
-                    a special edition commemorating the 30th anniversary of the American brand's oldest silo. 
-                    Let's explore all the details. </p>
+                        <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
+                    </Link>
+                    <p className="comment"> Introducing the new Nike Tiempo Legend X Emerald, 
+                        a special edition commemorating the 30th anniversary of the American brand's oldest silo. 
+                        Let's explore all the details. </p>
 
-                <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> April 14 </span>
-            </div>
+                    <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> April 14 </span>
+                </div>
 
-            <div className="motion">
-                <Link
-                to="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.webp"
-                target="_blank">
-                    <div style={{position: 'relative'}}>
-                        <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.png" alt="" />
-                        <button className="motion-box">Boots</button>
-                    </div>
+                <div className="motion">
+                    <Link
+                    to="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.webp"
+                    target="_blank">
+                        <div style={{position: 'relative'}}>
+                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.png" alt="" />
+                            <button className="motion-box">Boots</button>
+                        </div>
                     
-                    <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
-                </Link>
-                <p className="comment"> The starting whistle has already been blown, 
-                    so many brands are introducing their novelties for those stragglers who have not yet 
-                    chosen their <span> football boots. </span>
-                    Puma is one of them, so in this post we are going to present the latest release from the German brand. </p>
+                        <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
+                    </Link>
+                    <p className="comment"> The starting whistle has already been blown, 
+                        so many brands are introducing their novelties for those stragglers who have not yet 
+                        chosen their <span> football boots. </span>
+                        Puma is one of them, so in this post we are going to present the latest release from the German brand. </p>
 
-                <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> September 30 </span>
+                    <br /> <FaRegCalendarDays style={{float:'left', fontSize: '1.2rem', color: '#6c757d'}}/> <span style={{float: 'left', marginLeft: '6px', color: '#6c757d'}}> September 30 </span>
+                </div>
             </div>
-
+            
             <div className="motion-network">
                 <ul>
                     <Link 
                     to="https://www.youtube.com/channel/UC1Flg_fnXXgsYz6gCfYAeUg?sub_confirmation=1"
                     target="_blank"
                     className="network-link"> 
-                        <FaYoutube style={{color: 'red', fontSize: '2rem'}}/> 
-                        <span style={{ marginLeft: '1rem', marginTop: '-3rem'}}> 4.800 </span>
+                        <FaYoutube style={{ color: 'red', fontSize: '2rem', verticalAlign: 'middle' }} />
+                        <span style={{ marginLeft: '1rem'}}>4.800</span>
                     </Link> 
 
                     <Link
@@ -81,7 +82,7 @@ const Motion = () => {
                     target="_blank"
                     className="network-link">
                         <FaInstagram style={{color: '#E1306C', fontSize: '2rem'}}/> 
-                        <span style={{ marginLeft: '1rem', marginTop: '-3rem'}}> 686.000 </span>
+                        <span style={{ marginLeft: '1rem'}}> 686.000 </span>
                     </Link>
 
                     <Link
@@ -94,12 +95,12 @@ const Motion = () => {
                 </ul>
             </div>
             
-            <div className="customer">
+            <div>
                 {/* <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> RATINGS BY OUR CLIENTS </p> */}
                 <div className="customer-review">
                     <div className="customer-inline">
                         <div className="rating">
-                        <p style={{color: 'white', fontSize: '4rem', marginTop: '20px'}}> 4.7 </p>
+                        <p style={{color: 'white', fontSize: '4rem', marginTop: '10px'}}> 4.7 </p>
                         <Link>30246 opinions</Link>
                         <div>
                             <span className="star"><FaStar /></span>
@@ -112,7 +113,7 @@ const Motion = () => {
                     </div>
 
                     <div className="customer-inline">
-                        <ul style={{display: 'inline-block', marginRight: '5.6rem', lineHeight: '1rem'}}>
+                        <ul style={{display: 'inline-block', marginLeft: '3rem', lineHeight: '2.2rem'}}>
                             <p style={{textAlign: 'left'}}>Easiness <span><div className="progress"></div></span></p>
                             <p style={{textAlign: 'left'}}>Service <span><div className="progress"></div></span></p>
                             <p style={{textAlign: 'left'}}>Shipment <span><div className="progress"></div></span></p>
@@ -123,12 +124,14 @@ const Motion = () => {
                     <div className="customer-inline">
                         <p style={{fontWeight: 'bold', textAlign: 'left'}}>LAST OPINIONS: </p>
                         <div className="last-opinions">
-                            <p style={{fontWeight: 'bold'}}>Jason B. 
-                            <span style={{color: '#FFAC00', marginLeft: '10px'}}><FaStar /></span>
-                            <span style={{color: '#FFAC00'}}><FaStar /></span>
-                            <span style={{color: '#FFAC00'}}><FaStar /></span>
-                            <span style={{color: '#FFAC00'}}><FaStar /></span>
-                            <span style={{color: '#FFAC00'}}><FaStar /></span>
+                            <p style={{fontWeight: 'bold', padding: "20px 10px", lineHeight: "2rem"}}>Jason B. 
+                            <span style={{ display: 'inline-flex', alignItems: 'center', marginLeft: '0.5rem' }}>
+                                <FaStar style={{ color: '#FFAC00' }} />
+                                <FaStar style={{ color: '#FFAC00' }} />
+                                <FaStar style={{ color: '#FFAC00' }} />
+                                <FaStar style={{ color: '#FFAC00' }} />
+                                <FaStar style={{ color: '#FFAC00' }} />
+                            </span>
                             <br />
                             <p  style={{fontWeight: '400'}}>You was brilliant, I couldn't get these boots in England. But you did 
                             and they made my sons birthday even more special.</p>

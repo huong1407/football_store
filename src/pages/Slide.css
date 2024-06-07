@@ -2,7 +2,7 @@
     margin-top: 1rem;
     font-family: BeTheBest, Open Sans, sans-serif, Roboto, Arial;
     letter-spacing: 1px;
-    width: 100.7vw;
+    width: 100%;
     color: white;
     text-align: center;
     font-size: 17px;
@@ -10,7 +10,6 @@
     border: none;
     background-color: black; 
     padding: 27px;
-    margin-left: -2rem;
 }
 
 .button-slide {
@@ -53,9 +52,21 @@
     margin: 10px 5px;
     background-color: #d8d6da;
     border-radius: 30px;
-    border: 3px solid white;
     display: inline-block;
     opacity: 0.5;
-    transition: all 0.2s ease-in;
+}
+
+.dot:active {
+    background-color: #ffffff;
+    transition: all 0.6s ease-in;
+}
+
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1;}
 }
   

@@ -32,33 +32,34 @@ function Homepage() {
   return (
     <div className="main">
         <div className="header">
-        <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
-        <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
-        <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
-        <p className="banner-text"> <FaTruck /> Shipping your order to Vietnam</p>
+          <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
+          <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
+          <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
+          <p className="banner-text"> <FaTruck /> Shipping your order to Vietnam</p>
       </div>
       
-
       <div className="navbar">
         <div className="vertical-align">
           <Link to="/">
             <IoFootballOutline className="icon" />
           </Link>
-          {/* <p>Fútbol Emotion</p> */}
+          <p style={{ fontFamily: 'Calibri', fontWeight: 'bold', fontSize: '18px' }}>Fútbol <br /> Emotion</p>
 
-          <form className="form">
-            <input className="Search" type="text" placeholder="What are you looking for?"/>
-            <button type="submit" style={{border: 'none', backgroundColor: '#f3f3f5', fontSize: '13px', transform: 'translateX(-38px)', cursor:'pointer'}}> <ImSearch/> </button>
-          </form>
+          <Link to="/search">
+            <form className="form">
+              <input className="Search" type="text" placeholder="What are you looking for?"/>
+              <button type="submit" style={{border: 'none', backgroundColor: '#f3f3f5', fontSize: '13px', transform: 'translateX(-38px)', cursor:'pointer'}}> <ImSearch/> </button>
+            </form>
+          </Link>
 
-        <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(5em)'}}>
-          <AiOutlineUser style={{fontSize:'25px'}}/>
-          <p style={{ fontSize:'1px'}}>Log in</p>
-        </Link>
-        <Link style={{color:'black', textDecoration:'none', transform:'translateX(7em)'}}>
-          <TbShoppingBag style={{fontSize:'25px'}}/>
-          <p style={{ fontSize:'0.2px'}}>My cart</p>
-        </Link>
+          <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(11em)'}}>
+            <AiOutlineUser style={{fontSize:'25px'}}/>
+            <p style={{ fontSize:'1px', transform:'translateX(-5em) '}}>Log in</p>
+          </Link>
+          <Link style={{color:'black', textDecoration:'none', transform:'translateX(13em)'}}>
+            <TbShoppingBag style={{fontSize:'25px'}}/>
+            <p style={{ fontSize:'0.2px', transform:'translateX(-25em)' }}>My cart</p>
+          </Link>
         </div>
         
         <div className="nav">
@@ -66,28 +67,38 @@ function Homepage() {
             <Link to="/footballboots" className="site-title"> Football boots </Link>
             <div className="dropdown-content">
               <div className="boots">
-                <Link style={{textDecoration: 'none', color: 'black', fontWeight: '600'}}> <AiOutlineHome /> All football boots |</Link>
+                <Link style={{
+                  textDecoration: 'none', 
+                  color: 'black',
+                  display: 'flex', 
+                  verticalAlign: 'middle',
+                  alignItems: 'center'}}> 
+                  <AiOutlineHome style={{ fontSize: '20px'}}/> 
+                  <span style={{ fontWeight: '600' }}> All football boots | </span>
                 <span>36 EU</span> | <span>37 EU</span> | <span>38 EU</span> | <span>39 EU</span> | 
                 <span>40 EU</span> | <span>41 EU</span> | <span>42 EU</span> | <span>43 EU</span> | 
-                <span>44 EU</span> | <span>45 EU</span> | <span>46 EU</span> 
+                <span>44 EU</span> | <span>45 EU</span> | <span>46 EU</span> </Link>
               </div>
               
               <div className="img">
                   <p>Boot Recommended</p>
                   <MdArrowOutward style={{color: 'white', fontSize: '17px', transform:'translate(1240%, -190%)'}}/>
               </div>
-              <p style={{color: 'red', fontWeight: '600'}}> <GoTag/> Boots on sale </p>
-              <p style={{fontWeight: '600'}}> Boots for kid </p>
-              <p style={{fontWeight: '600'}}> Boots for women </p>
+              <div style={{ marginLeft: '10px' }}>
+                  <p style={{color: 'red', fontWeight: '600', marginTop: '10px'}}> <GoTag/> Boots on sale </p>
+                  <p style={{fontWeight: '600'}}> Boots for kid </p>
+                  <p style={{fontWeight: '600'}}> Boots for women </p>
+              </div>
+              
 
               <div className="content">
               <div className="brand-section">
                 <p style={{fontWeight: '600', fontSize: '15px'}}>  ADIDAS FOOTBALL BOOTS </p>
-                <p style={{marginTop: '20px', fontSize: '10px'}}> Football boots adidas Predators <span style={{marginLeft: '60px'}}> Cheap adidas Copa football boots </span></p>
+                <p style={{marginTop: '10px', fontSize: '10px'}}> Football boots adidas Predators <span style={{marginLeft: '60px'}}> Cheap adidas Copa football boots </span></p>
                 <p style={{fontSize: '10px'}}> adidas X Football boots <span style={{marginLeft: '108px'}}> adidas classic football boots </span></p>
 
                 <p style={{fontWeight: '600', marginTop: '32px', fontSize: '15px'}}> PUMA FOOTBALL BOOTS </p>
-                <p style={{marginTop: '20px', fontSize: '10px'}}> Puma Future Football Boots <span style={{marginLeft: '84px'}}> Puma King Football Boots </span></p>
+                <p style={{marginTop: '10px', fontSize: '10px'}}> Puma Future Football Boots <span style={{marginLeft: '84px'}}> Puma King Football Boots </span></p>
                 <p style={{fontSize: '10px'}}> Puma Ultra Football Boots </p>
               </div>
             </div>
@@ -108,7 +119,6 @@ function Homepage() {
             <li><Link className="site-title"> Blogs </Link></li>
           </ul>
         </div>
-        
       </div>
       <Slideshow />
       <Product />

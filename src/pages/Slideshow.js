@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Slide.css"; 
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -14,22 +14,28 @@ function Slideshow() {
   ];
   const [slideIndex, setSlideIndex] = useState(0);
 
-  const goToPrevious = () => {
+  const goToPrevious = useCallback(() => {
     let newIndex = slideIndex - 1;
     if (newIndex < 0) {
       newIndex = slides.length - 1;
     }
     setSlideIndex(newIndex);                                                         
-  }
+  }, [slideIndex, slides.length]);
 
-  const goToNext = () => {
+  const goToNext = useCallback(() => {
     const newIndex = (slideIndex + 1) % slides.length;
     setSlideIndex(newIndex);
-  }
+  }, [slideIndex, slides.length]);
 
   const goToSlide = (index) => {
     setSlideIndex(index);
   }
+
+  useEffect(() => {
+    const timer = setTimeout(goToNext, 5000);
+    return () => clearTimeout(timer);
+  }, [goToNext])
+
 
   return (
     <div >
@@ -40,9 +46,9 @@ function Slideshow() {
           <span style={{fontWeight:'bold', filter: 'blur(0.4px)'}}> SHOW YOUR COLOURS!</span>
           <span className="button-slide">See products</span>
         </div>
-        <img src={slides[slideIndex]} alt="" style={{marginLeft: '-2rem', width: '100.6vw', height: '360px' }} />
+        
       </Link>
-      
+      <img src={slides[slideIndex]} alt="" style={{ width: '100%', height: '360px' }} />
       <button className="prev" onClick={goToPrevious}><FaChevronLeft /></button>
       <button className="next" onClick={goToNext}><FaChevronRight /></button>
 

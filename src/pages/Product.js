@@ -10,68 +10,58 @@ function Product() {
   return (
     <div>
       <div className="row">
-        <div>
-          <TbLockSquareRoundedFilled style={{ fontSize: "40px", float: "left", transform: "translate(320%, -10%)"}}/>
+        <div className="row-first">
+          <TbLockSquareRoundedFilled style={{ fontSize: "20rem", transform: "translate(150%, -50%)"}}/>
           <p className="column">
-            <span style={{ fontWeight: "bold" }}>#1 retailer</span> of football technical equipment in Spain and European top 3
-            <img
-              width={220}
-              height={110}
+            <span style={{ fontWeight: "bold" }}>#1 retailer</span> of football technical equipment in Spain  and <br/> European top 3
+           <img
               src="https://www.futbolemotion.com/imagesEstructura/trusted-shop/INT/premios.jpg"
               alt=""
-              style={{ marginTop: "40px", marginLeft: "-30px" }} />
-          </p>
+              style={{ marginTop: "44px", width: "80rem", height: "110px" }} />
+        </p>
         </div>
 
-        <div>
-          <FaCheckCircle style={{ fontSize: "35px", float: "left", transform: "translate(370%, -10%)"}}/>
+        <div className="row-first">
+          <FaCheckCircle style={{ fontSize: "45px", transform: "translate(190%, -50%)"}}/>
           <p className="column" style={{ fontWeight: "bold" }}> 100% Genuine products
             <img
-              width={220}
-              height={110}
               src="https://www.futbolemotion.com/imagesEstructura/trusted-shop/INT/originales-202307.jpg"
               alt=""
-              style={{ marginTop: "74px", marginLeft: "-30px" }}/>
+              style={{ marginTop: "82px",marginLeft: "10px", width: "16.9rem", height: "110px" }}/>
           </p>
         </div>
 
-        <div>
-          <AiOutlineGlobal style={{ fontSize: "35px", float: "left", transform: "translate(360%, -10%)" }}/>
+        <div className="row-first">
+          <AiOutlineGlobal style={{ fontSize: "45px", transform: "translate(190%, -50%)" }}/>
           <p className="column" style={{ fontWeight: "bold" }}>
             Secure international payment
             <img
-              width={220}
-              height={110}
               src="https://www.futbolemotion.com/imagesEstructura/trusted-shop/INT/pagos.jpg"
               alt=""
-              style={{ marginTop: "58px", marginLeft: "-30px" }}/>
+              style={{ marginTop: "82px", marginLeft: "10px", width: "16.8rem", height: "110px" }}/>
           </p>
         </div>
 
-        <div>
-          <MdStars style={{ fontSize: "40px", float: "left", transform: "translate(320%, -10%)"}}/>
+        <div className="row-first">
+          <MdStars style={{ fontSize: "47px", transform: "translate(180%, -50%)" }}/>
           <p className="column"> Become a <span style={{ fontWeight: "bold" }}>member</span> and
-            enjoy <span style={{ fontWeight: "bold" }}>permanent offers</span>{" "}
+            enjoy <br /> <span style={{ fontWeight: "bold" }}>permanent offers</span>{" "}
             instantly
             <img
-              width={220}
-              height={110}
               src="https://www.futbolemotion.com/imagesEstructura/trusted-shop/INT/eclub-202307.jpg"
               alt=""
-              style={{ marginTop: "41px", marginLeft: "-30px" }}/>
+              style={{ marginTop: "62px", marginLeft: "9px", width: "16.8rem", height: "110px" }}/>
           </p>
         </div>
 
-        <div>
-          <MdTimer style={{ fontSize: "37px", float: "left", transform: "translate(360%, -10%)"}}/>
+        <div className="row-first">
+          <MdTimer style={{ fontSize: "47px", transform: "translate(190%, -50%)" }}/>
           <p className="column">100% <span style={{ fontWeight: "bold" }}>
               Secure worldwide shipping </span>
             <img
-              width={220}
-              height={110}
               src="https://www.futbolemotion.com/imagesEstructura/trusted-shop/INT/envios-202307.jpg"
               alt=""
-              style={{ marginTop: "58px", marginLeft: "-30px" }}/>
+              style={{ marginTop: "82px", marginLeft: "8px", width: "16.85rem", height: "110px" }}/>
           </p>
         </div>
       </div>
@@ -85,14 +75,13 @@ function Product() {
             <img
               loading="lazy"
               src="https://www.futbolemotion.com/imagesuploads/cromosportadas/web/destacados_297x353_0327_adidas.jpg"
-              alt=""
-              width={160}
-              height={180}/>
+              alt=""/>
             <p style={{
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold",}}>Football boots</p>
+                fontWeight: "bold",
+                marginTop: "10px"}}>Football boots</p>
           </Link>
         </div>
 
@@ -108,7 +97,8 @@ function Product() {
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold"}}> Goalkeeper gloves </p>
+                fontWeight: "bold",
+                marginTop: "10px"}}> Goalkeeper gloves </p>
           </Link>
         </div>
 
@@ -117,14 +107,13 @@ function Product() {
             <img
               loading="lazy"
               src="https://www.futbolemotion.com/imagesuploads/cromosportadas/web/destacados_297x353_0224_futsal.jpg"
-              alt=""
-              width={160}
-              height={180}/>
+              alt=""/>
             <p style={{
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold"}}> Futsal Shoes </p>
+                fontWeight: "bold",
+                marginTop: "10px"}}> Futsal Shoes </p>
           </Link>
         </div>
 
@@ -133,15 +122,14 @@ function Product() {
             <img
               loading="lazy"
               src="https://www.futbolemotion.com/imagesuploads/cromosportadas/web/cromos_297x353_mayo22_lifestyle1.jpg"
-              alt=""
-              width={160}
-              height={180}/>
+              alt=""/>
             <p
               style={{
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold"}}> LIFESTYLE </p>
+                fontWeight: "bold",
+                marginTop: "10px"}}> LIFESTYLE </p>
           </Link>
         </div>
 
@@ -150,14 +138,13 @@ function Product() {
             <img
               loading="lazy"
               src="https://www.futbolemotion.com/imagesuploads/cromosportadas/web/destacados_297x353_acc0424.jpg"
-              alt=""
-              width={160}
-              height={180} />
+              alt="" />
             <p style={{
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold"}}> Accessories</p>
+                fontWeight: "bold",
+                marginTop: "10px"}}> Accessories</p>
           </Link>
         </div>
 
@@ -166,20 +153,19 @@ function Product() {
             <img
               loading="lazy"
               src="https://www.futbolemotion.com/imagesuploads/cromosportadas/web/cromos_297x353_manchester_mayo23.jpg"
-              alt=""
-              width={160}
-              height={180}/>
+              alt=""/>
             <p style={{
                 border: "1px solid black",
                 borderRadius: "10px",
                 padding: "2px",
-                fontWeight: "bold"}}> FOOTBALL JERSEYS </p>
+                fontWeight: "bold",
+                marginTop: "10px"}}> FOOTBALL JERSEYS </p>
           </Link>
         </div>
       </div>
 
       <div>
-        <p style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> WHICH BOOTS OR GLOVES SHOULD I GET? </p>
+        <h1 style={{fontSize: '28px', fontWeight: 'bold', letterSpacing: '2px', textAlign: 'center', fontFamily: 'Verdana'}}> WHICH BOOTS OR GLOVES SHOULD I GET? </h1>
         <div className="options">
           <div className="option-container">
             <p className="caption">

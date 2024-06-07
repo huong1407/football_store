@@ -64,7 +64,7 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;         /* obligatory */
-  width: 98.6%;
+  width: 100%;
   background-color: white;
   z-index: 2;       /* determine the sort order of elements */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,17 +85,18 @@ body {
 .form {
   display: flex;
   align-items: center;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 .Search {
-  padding: 14px 20px;
-  font-size: 16px;
+  padding: 10px 20px;
+  font-size: 12px;
   border: none;
   border-radius: 20px;
   background-color: #f3f3f5;
-  text-indent: 5px;
   width: 900px;
+  font-family: Verdana;
+  font-weight: 600;
   
 }
 
@@ -112,6 +113,7 @@ button {
   justify-content: space-between;
   text-align: justify;
   margin-top: 10px;
+  font-family: Calibri;
 }
 
 .site-title {
@@ -136,6 +138,7 @@ button {
   position: absolute;
   background-color: #ffffff;
   z-index: 1;
+  margin-left: -10px;
 }
 
 .dropdown-content p {
@@ -165,6 +168,7 @@ button {
   filter: brightness(0.8);
   border-radius: 6px;
   margin-top: 25px;
+  margin-left: 10px;
 }
 
 .img p {
@@ -181,14 +185,12 @@ button {
   border: 1px solid #e5e7eb;
   font-size: 1.1rem;
   margin-top: 15px;
-  margin-left: -20px;
   text-indent: 20px;
   padding: 10px;
   width: 100vw;
 }
 
 .boots span {
-  margin-left: 15px;
   text-align: center;
 }
 
@@ -197,7 +199,9 @@ button {
 }
 
 .brand-section {
-  margin-top: -155px;
+  margin-top: -130px;
+  line-height: 2rem;
+  margin-bottom: 20px;
 }
 
 .brand-section > p {
@@ -205,28 +209,35 @@ button {
 }
 
 .row {
+  display: flex;
   font-size: 13px;
+  box-sizing: border-box;
+  border: none;
+  height: 23rem;
+  width: 100%;
+  justify-content: space-between;
 }
-
-.row p {
-  padding-top: 50px;
-}
-
-.column {
-  margin-right: 30px;
-  margin-bottom: 90px;
-  padding: 30px;
-  float: left;
-  height: 170px;
-  width: 160px;
-  text-align: center;
+.row-first{
+  display: flex;
+  box-sizing: border-box;
+  border: none;
   background-color: #f7f8f9;
-  line-height: 1.6;
+  height: 21rem;
+  width: 17rem;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+.row-first p {
+  margin-top: 60px;
+  margin-left: -55px;
+  font-family: Calibri;
 }
 
 .featured-products {
   align-items: center;
   text-align: center;
+  margin-top: 80px;
 }
 .image {
   float: left;
@@ -235,7 +246,7 @@ button {
   box-sizing: border-box;
   border: none;
   width: 200px;
-  height: 250px;
+  height: 260px;
   padding: 20px;
   margin: 20px;
   background-color: #f7f7f7;
@@ -244,7 +255,7 @@ button {
 
 .image img:hover {
   transform: scale(1.1);
-  clip-path: inset(30% at center);
+  clip-path: inset(10% at center);
   background-color: transparent;
 }
 
