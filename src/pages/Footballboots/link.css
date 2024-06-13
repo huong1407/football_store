@@ -531,10 +531,10 @@
     position: absolute;
     bottom: 5px;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng với độ trong suốt */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 5px;
-    width: 350px; /* Để phần tử vừa trong box */
+    width: 350px;
     box-sizing: border-box;
 }
 

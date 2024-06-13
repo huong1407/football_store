@@ -36,3 +36,99 @@
     font-family: Calibri;
     font-size: 16px;
 }
+
+.searching input {
+    transition: all 0.2s ease-in-out;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #eceef0;
+    width: 98%;
+    font-size: 4em;
+    font-weight: 400;
+    color: #0f0f0f;
+    padding: 0 10% 0 1.5rem;
+    margin: -20px 10px 5px 10px;
+    outline: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif serif;
+}
+.searching input:focus {
+    border-bottom-color: #fac000;
+    outline: none;
+}
+  
+.searching button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    color: #0f0f0f;
+    opacity: 0.5;
+}
+  
+.searching .search-icon {
+    font-size: 4em;
+    color: #757575;
+}
+
+.list-search {
+    display: flex;
+    box-sizing: border-box;
+    border: none;
+    flex-wrap: wrap;
+    margin:  70px 0 150rem -170px;
+    gap: 27px;
+}
+
+.result {
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    width: 26rem;
+    height: 400px;
+    position: relative;
+}
+
+.result img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.result p {
+    position: relative; 
+    z-index: 1; 
+    padding: 0 15px;
+    font-weight: bold;
+    text-align: left;
+    left: 0;
+    top: 350px;
+    bottom: 0;
+}
+
+.result:hover .normal-image {
+    opacity: 0;
+}
+
+.result:hover .hover-image {
+    opacity: 1;
+}
+
+.result:hover .hover-text {
+    display: block;
+}
+
+.result:hover .add-text {
+    position: absolute;
+    bottom: -30px;
+    left: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    box-sizing: border-box;
+}

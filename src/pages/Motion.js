@@ -16,11 +16,12 @@ const Motion = () => {
                     to="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.webp" 
                     target="_blank">
                         <div style={{position: 'relative'}}>
-                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.jpg" alt="" />
+                            <img width={430} height={300} 
+                            src="https://www.futbolemotion.com/imagescms/postblogs/22240/tamanofijo/post-nike-rising-gem-pack-portjpg0.jpg" alt="" />
                             <button className="motion-box">Boots</button>
                         </div>
                     
-                    <br /> Nike presents the new "Rising Gem Pack"     
+                    <br /> <div> Nike presents the new "Rising Gem Pack" </div>    
                     </Link>
                     <p className="comment"> A new pack from the American brand that aims to focus on young players, 
                         those new gems emerging in the world of football who will wear the swoosh. 
@@ -34,11 +35,12 @@ const Motion = () => {
                     to="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg"
                     target="_blank">
                         <div style={{position:'relative'}}>
-                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg" alt="" />
+                            <img width={430} height={300} 
+                            src="https://www.futbolemotion.com/imagescms/postblogs/22230/tamanofijo/post-nike-tiempo-30-aniversario-portjpg0.jpg" alt="" />
                             <button className="motion-box">Boots</button>
                         </div>
                     
-                        <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
+                        <br /> <div> Nike Tiempo Legend X "Emerald" 30th Anniversary </div> 
                     </Link>
                     <p className="comment"> Introducing the new Nike Tiempo Legend X Emerald, 
                         a special edition commemorating the 30th anniversary of the American brand's oldest silo. 
@@ -52,11 +54,11 @@ const Motion = () => {
                     to="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.webp"
                     target="_blank">
                         <div style={{position: 'relative'}}>
-                            <img width={460} height={300} src="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.png" alt="" />
+                            <img width={430} height={300} 
+                            src="https://www.futbolemotion.com/imagescms/postblogs/22154/tamanofijo/puma-gear-up-packpng0.png" alt="" />
                             <button className="motion-box">Boots</button>
                         </div>
-                    
-                        <br /> Nike Tiempo Legend X "Emerald" 30th Anniversary
+                        <br /> <div> Nike Tiempo Legend X "Emerald" 30th Anniversary </div>
                     </Link>
                     <p className="comment"> The starting whistle has already been blown, 
                         so many brands are introducing their novelties for those stragglers who have not yet 

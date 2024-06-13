@@ -1,9 +1,6 @@
 .motion {
-    padding: 0 10px;
-    margin-right: 100px;
+    margin: 30px 15px 0 22px;
     float: left;
-    width: 26%;
-    margin-top: 20px;
 }
 .motion a {
     text-decoration: none;
@@ -26,7 +23,6 @@
 }
 
 .comment {
-    word-break: keep-all;
     width: 34rem;
     text-align: left;
     color: #6c757d;
@@ -47,7 +43,7 @@
 
 .motion-network {
     position: absolute;
-    margin-top: 39rem;
+    margin-top: 41rem;
     margin-bottom: 30rem;
     width: 100%;
     box-sizing: border-box;

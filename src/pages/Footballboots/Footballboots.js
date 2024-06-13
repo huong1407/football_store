@@ -51,14 +51,28 @@ const Footballboots = () => {
     return (
      <div className="main">
         <div className="header">
-        <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
-        <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
-        <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
-        <p className="banner-text"> <FaTruck /> Shipping your order to Vietnam</p>
+          <div className="banner-text">
+            <GiRecycle style={{  marginLeft: '540px' }}/>
+            <p>  If it doesn't fit, you can exchange it for another size</p>
+          </div>
+
+          <div className="banner-text">
+            <GoClockFill style={{ marginLeft: '600px' }}/>
+            <p> Delivery within 5-7 working days </p>
+          </div>
+
+          <div className="banner-text">
+            <MdPeopleAlt style={{ marginLeft: '640px' }}/>
+            <p> Member benefit </p>
+          </div>
+
+          <div className="banner-text">
+            <FaTruck style={{ marginLeft: '600px' }}/>
+            <p> Shipping your order to Vietnam </p>
+          </div>
       </div>
       
-
-      <div className="navbar">
+      <div className="navbar" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)'}}>
         <div className="vertical-align">
           <Link to="/">
             <IoFootballOutline className="icon" />
@@ -72,13 +86,13 @@ const Footballboots = () => {
             </form>
           </Link>
           
-        <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(22em)'}}>
+        <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(15em)'}}>
           <AiOutlineUser style={{fontSize:'25px'}}/>
           <p style={{ fontSize:'1px',  transform:'translateX(-5em)' }}>Log in</p>
         </Link>
-        <Link style={{color:'black', textDecoration:'none', transform:'translateX(24em)'}}>
+        <Link style={{color:'black', textDecoration:'none', transform:'translateX(17em)'}}>
           <TbShoppingBag style={{fontSize:'25px'}}/>
-          <p style={{ fontSize:'0.2px', transform:'translateX(-25em)' }}>My cart</p>
+          <p style={{ fontSize:'0.2px', transform:'translateX(-35em)' }}>My cart</p>
         </Link>
         </div>
         

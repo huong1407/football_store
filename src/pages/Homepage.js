@@ -11,7 +11,6 @@ import { AiOutlineUser, AiOutlineHome } from "react-icons/ai";
 import { TbShoppingBag } from "react-icons/tb";
 import Product from "./Product";
 import Slideshow from "./Slideshow";
-// import Recommended from "./Recommended";
 import Motion from "./Motion";
 import FooterBar from "./FooterBar";
 
@@ -32,18 +31,33 @@ function Homepage() {
   return (
     <div className="main">
         <div className="header">
-          <p className="banner-text"> <GiRecycle /> If it doesn't fit, you can exchange it for another size</p>
-          <p className="banner-text"> <GoClockFill /> Delivery within 5-7 working days</p>
-          <p className="banner-text"> <MdPeopleAlt /> Member benefit </p>
-          <p className="banner-text"> <FaTruck /> Shipping your order to Vietnam</p>
+          <div className="banner-text">
+            <GiRecycle style={{  marginLeft: '540px' }}/>
+            <p>  If it doesn't fit, you can exchange it for another size</p>
+          </div>
+
+          <div className="banner-text">
+            <GoClockFill style={{ marginLeft: '600px' }}/>
+            <p> Delivery within 5-7 working days </p>
+          </div>
+
+          <div className="banner-text">
+            <MdPeopleAlt style={{ marginLeft: '640px' }}/>
+            <p> Member benefit </p>
+          </div>
+
+          <div className="banner-text">
+            <FaTruck style={{ marginLeft: '600px' }}/>
+            <p> Shipping your order to Vietnam </p>
+          </div>
       </div>
       
-      <div className="navbar">
+      <div className="navbar" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
         <div className="vertical-align">
           <Link to="/">
             <IoFootballOutline className="icon" />
           </Link>
-          <p style={{ fontFamily: 'Calibri', fontWeight: 'bold', fontSize: '18px' }}>Fútbol <br /> Emotion</p>
+          <p style={{ fontFamily: '"BeTheBest", Open Sans, sans-serif, Roboto, Arial', fontWeight: 'bold', fontSize: '18px' }}>Fútbol <br /> Emotion</p>
 
           <Link to="/search">
             <form className="form">
@@ -52,13 +66,13 @@ function Homepage() {
             </form>
           </Link>
 
-          <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(11em)'}}>
+          <Link to='/login' target="_self" style={{color:'black', textDecoration:'none', transform:'translateX(14em)'}}>
             <AiOutlineUser style={{fontSize:'25px'}}/>
             <p style={{ fontSize:'1px', transform:'translateX(-5em) '}}>Log in</p>
           </Link>
-          <Link style={{color:'black', textDecoration:'none', transform:'translateX(13em)'}}>
+          <Link style={{color:'black', textDecoration:'none', transform:'translateX(16em)'}}>
             <TbShoppingBag style={{fontSize:'25px'}}/>
-            <p style={{ fontSize:'0.2px', transform:'translateX(-25em)' }}>My cart</p>
+            <p style={{ fontSize:'0.2px', transform:'translateX(-30em)' }}>My cart</p>
           </Link>
         </div>
         
