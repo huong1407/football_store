@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./search.css";
-import "./../Footballboots/link.css";
-import { GoClockFill, GoArrowRight } from "react-icons/go";
-import { MdPeopleAlt } from "react-icons/md";
-import { FaTruck } from "react-icons/fa";
-import { GiRecycle } from "react-icons/gi";
-import { IoFootballOutline } from "react-icons/io5";
+import "./link.css";
+import { GoArrowRight } from "react-icons/go";
 import { ImSearch } from "react-icons/im";
 import { AiOutlineUser, AiOutlineClose } from "react-icons/ai";
+import { IoFootballOutline } from "react-icons/io5";
 import { TbShoppingBag } from "react-icons/tb";
 
+const Search = () => {
 const products = [
   {
     id: 1,
@@ -113,8 +111,15 @@ const products = [
   },
 ];
 
-const Search = () => {
+const banners = [
+  "If it doesn't fit, you can exchange it for another size",
+  "Delivery within 5-7 working days",
+  "Member benefit",
+  "Shipping your order to Vietnam",
+];
+
   const [searchTerm, setSearchTerm] = useState("");
+  const [banner, setBanner] = useState(0);
 
   const filter = products.filter((product) => {
     if (!searchTerm) return false;
@@ -122,80 +127,53 @@ const Search = () => {
   });
   console.log(filter);
 
+  const nextBanner = useCallback(() => {
+    setBanner((prevBanner) => (prevBanner + 1) % banners.length);
+}, [banners.length]);
+
+  useEffect(() => {
+    const timer2 = setTimeout(nextBanner, 3000);
+    return () => {
+      clearTimeout(timer2);
+    }
+  }, [nextBanner]);
+
   return (
     <div>
-      <div style={{ position: "sticky", top: "0", zIndex: "9999" }}>
-        <div className="main">
-        <div className="header">
-          <div className="banner-text">
-            <GiRecycle style={{  marginLeft: '540px' }}/>
-            <p>  If it doesn't fit, you can exchange it for another size</p>
-          </div>
-
-          <div className="banner-text">
-            <GoClockFill style={{ marginLeft: '600px' }}/>
-            <p> Delivery within 5-7 working days </p>
-          </div>
-
-          <div className="banner-text">
-            <MdPeopleAlt style={{ marginLeft: '640px' }}/>
-            <p> Member benefit </p>
-          </div>
-
-          <div className="banner-text">
-            <FaTruck style={{ marginLeft: '600px' }}/>
-            <p> Shipping your order to Vietnam </p>
-          </div>
+      <div className="header">
+        <p className="text-white-600">{banners[banner]}</p>
       </div>
 
-          <div className="navbar">
-            <div className="vertical-align">
-              <Link to="/">
-                <IoFootballOutline className="icon" />
-              </Link>
-              <p
-                style={{
-                  fontFamily: "Calibri",
+      <div className="navbar">
+        <div className="vertical-align">
+          <div>
+            <Link to="/" className="flex items-center ms-auto">
+              <IoFootballOutline className="icon" />
+              <p style={{
+                  fontFamily:'"BeTheBest", Open Sans, sans-serif, Roboto, Arial',
                   fontWeight: "bold",
-                  fontSize: "18px",
-                }}> Fútbol <br /> Emotion </p>
-
-              <div style={{ display: "inline-flex", marginLeft: "82rem" }}>
-                <Link
-                  to="/login"
-                  target="_self"
-                  style={{
-                    color: "black",
-                    textDecoration: "none",
-                    transform: "translateX(11em)",}}>
-                  <AiOutlineUser style={{ fontSize: "25px" }} />
-                  <p style={{ fontSize: "1px", transform: "translateX(-5em)" }}>
-                    Log in
-                  </p>
-                </Link>
-
-                <Link
-                  style={{
-                    color: "black",
-                    textDecoration: "none",
-                    transform: "translateX(13em)",}}>
-                  <TbShoppingBag style={{ fontSize: "25px" }} />
-                  <p
-                    style={{
-                      fontSize: "0.2px",
-                      transform: "translateX(-25em)", }}> My cart
-                  </p>
-                </Link>
-              </div>
-            </div>
+                  fontSize: "16px",
+                  textAlign: "left",}}> Fútbol <br /> Emotion</p>
+            </Link>
+          </div>
+    
+          <div className="absolute right-2 flex items-center ms-auto space-x-4 mr-7">
+            <Link to="/login" className="flex flex-col items-center text-center relative mx-2">
+              <AiOutlineUser className="text-3xl" />
+              <p className="opacity-100 text-sm m-0">Log in</p>
+            </Link>
+    
+            <Link to="/cart" target="_self" className="flex flex-col items-center text-center relative mx-2">
+              <TbShoppingBag className="text-3xl" />
+              <p className="opacity-100 text-sm m-0">My cart</p>
+            </Link>
           </div>
         </div>
       </div>
 
       <div style={{ position: "relative" }}>
         <div className="searching">
-          <input
-            type="text"
+          <input type="text"
             placeholder="What are you looking for?"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}/>
@@ -205,16 +183,12 @@ const Search = () => {
         </div>
       </div>
 
-      {filter.length > 0 ? (
+      <div className="w-full max-w-fit">
+        {filter.length > 0 ? (
           <div style={{ display: 'flex', marginTop:'10px' }}>
             <div className="filter-product">
               <div className="boot-brands">
-                <p
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "15px",
-                    marginTop: "7px",
-                  }}> Category </p>
+                <p className="text-sm font-semibold mt-2"> Category </p>
                 <ul className="list-ul" style={{ marginLeft: "-35px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -256,12 +230,7 @@ const Search = () => {
               </div>
 
               <div className="colour">
-                <p
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",
-                  }}> Colour </p>
+                <p className="text-sm font-semibold mt-2"> Colour </p>
                 <button style={{ backgroundColor: "#333333" }}></button>
                 <button style={{ backgroundColor: "#ffffff" }}></button>
                 <button style={{ backgroundColor: "#303f9f" }}></button>
@@ -280,10 +249,7 @@ const Search = () => {
               </div>
 
               <div className="gender">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px", }}> Sex </p>
+                <p className="text-sm font-semibold mt-2"> Sex </p>
                 <ul className="list-ul" style={{ marginLeft: "-5px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -297,11 +263,7 @@ const Search = () => {
               </div>
 
               <div className="outsole">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",
-                  }}> Type of outsole </p>
+                <p className="text-sm font-semibold mt-2"> Type of outsole </p>
                 <ul className="list-ul">
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -331,11 +293,7 @@ const Search = () => {
               </div>
 
               <div className="material">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",
-                  }}> Type of material </p>
+                <p className="text-sm font-semibold mt-2"> Type of material </p>
                 <ul className="list-ul" style={{ marginLeft: "-85px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -349,10 +307,7 @@ const Search = () => {
               </div>
 
               <div className="age">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",}}> Age </p>
+                <p className="text-sm font-semibold mt-2"> Age </p>
                 <ul className="list-ul" style={{ marginLeft: "-10px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -366,11 +321,7 @@ const Search = () => {
               </div>
 
               <div className="shape">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",
-                  }}> Shape </p>
+                <p className="text-sm font-semibold mt-2"> Shape </p>
                 <ul className="list-ul" style={{ marginLeft: "-24px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -388,10 +339,7 @@ const Search = () => {
               </div>
 
               <div className="laces">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",}}> Laces </p>
+                <p className="text-sm font-semibold mt-2"> Laces </p>
                 <ul className="list-ul" style={{ marginLeft: "-20px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -409,12 +357,8 @@ const Search = () => {
               </div>
 
               <div className="anklet">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",
-                  }}> Anklet </p>
-                <ul className="list-ul" style={{ marginLeft: "-28px" }}>
+                <p className="text-sm font-semibold mt-2"> Anklet </p>
+                <ul className="list-ul -ml-6">
                   <li>
                     <input className="list-input" type="checkbox" />
                     <label>With ankle sock</label>
@@ -461,12 +405,8 @@ const Search = () => {
               </div>
 
               <div className="minimum-price">
-                <p
-                  style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",}}> Minimum price
-                </p>
+                <p className="text-sm font-semibold mt-2"> Minimum price </p>
+                
                 <ul className="list-ul" style={{ marginLeft: "-80px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -488,10 +428,7 @@ const Search = () => {
               </div>
 
               <div className="maximum-price">
-                <p style={{
-                    fontWeight: "600",
-                    fontSize: "14px",
-                    marginTop: "7px",}}> Maximum price </p>
+                <p className="text-sm font-semibold mt-2"> Maximum price </p>
                 <ul className="list-ul" style={{ marginLeft: "-80px" }}>
                   <li>
                     <input className="list-input" type="checkbox" />
@@ -514,9 +451,8 @@ const Search = () => {
             </div>
 
             <div>
-              <p style={{ marginLeft: "20px" }}> Order by: <br />
-                <select
-                  style={{
+              <p className="ml-5"> Order by: <br />
+                <select style={{
                     backgroundColor: "#ffffff",
                     border: "1px solid #ced4da",
                     color: "black",
@@ -556,7 +492,7 @@ const Search = () => {
       ) : (
         <div className="search-page">
           <div className="top-search">
-            <p style={{ fontWeight: "bold" }}> Top searches </p>
+            <p className="font-bold"> Top searches </p>
             <ul>
               <p><ImSearch /> adida predator
                 <GoArrowRight style={{ position: "relative", left: "180px" }} />
@@ -581,7 +517,7 @@ const Search = () => {
           </div>
 
           <div className="most-search">
-            <p style={{ fontWeight: "bold" }}> Most searched products </p>
+            <p className="font-bold"> Most searched products </p>
             <div className="list-product">
               <div className="product">
                 <img
@@ -696,8 +632,7 @@ const Search = () => {
                   <p className="new-release" style={{ marginRight: "10px" }}>
                     NEW RELEASES
                   </p>
-                  <span
-                    style={{
+                  <span style={{
                       border: "2px solid blue",
                       borderRadius: "20px",
                       color: "#0043a8",
@@ -713,6 +648,8 @@ const Search = () => {
           </div>
         </div>
       )}
+      </div>
+      
     </div>
   );
 };

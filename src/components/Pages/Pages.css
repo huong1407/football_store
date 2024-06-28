@@ -1,0 +1,474 @@
+/* Slideshow */
+.box {
+  position: relative;
+  margin-top: 1rem;
+  font-family: BeTheBest, Open Sans, sans-serif, Roboto, Arial;
+  letter-spacing: 1px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  box-sizing: border-box;
+  border: none;
+  background-color: black; 
+  padding: 27px;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+.button-slide {
+  box-sizing: border-box;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 20px;
+  padding: 9px;
+  background-color: white;
+  color: black;
+  filter: blur(0.4px);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  transition: opacity 0.6s ease;
+  user-select: none;
+  opacity: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container:hover .prev {
+  opacity: 1;
+  animation: left 0.7s linear normal forwards;
+}
+
+.slideshow-container:hover .next {
+opacity: 1;
+animation: right 0.7s linear normal forwards;
+}
+
+@keyframes left {
+  from {
+      left: 0px;
+  }
+  to {
+      left: 20px;
+  }
+}
+
+@keyframes right {
+  from {
+      right: 0px;
+  }
+  to {
+      right: 20px;
+  }
+}
+
+.dot {
+  transform: translateY(-400%);
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 10px 5px;
+  background-color: #d8d6da;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background-color 2s ease;
+  opacity: 0.5;
+}
+
+.active, .dot:active {
+  background-color: white;
+  transition: 0.5s ease;
+  opacity: 4;
+}
+
+
+/* Product*/
+.image {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  background-color: #f7f7f7;
+  width: 210px;
+  max-width: 210px;
+  max-height: 270px;
+}
+
+.image p {
+  border: 1px solid black;
+  max-width: 170px;
+  border-radius: 20px;
+  background-color: #f7f8f9;
+  margin-left: 10px;
+  padding: 2px;
+  margin-bottom: 10px;
+  font-family: Calibri;
+  font-weight: bold;
+}
+
+.image img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.featured-img {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 230px;
+}
+
+.image:hover img {
+  transform: scale(1.04);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("https://www.futbolemotion.com/imagesEstructura/recomendador/recommender_bg.webp");
+  background-size: cover;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.option-container {
+  width: 100%;
+}
+
+.option-container img {
+  margin: -5.2rem 1rem 0 0;
+  max-height: 500px;
+  max-width: 300px;
+}
+
+.caption {
+  position: relative;
+  line-height: 1.6;
+  text-align: center; 
+  font-family: Calibri;
+}
+
+.click {
+  padding: 0.6rem 1.5rem; 
+  background-color:#ffac00; 
+  border:none;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-top: 10px;
+  align-content: center;
+}
+
+.click a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  text-align: center;
+}
+
+.click:hover {
+  background-color: #ffb826;
+}
+
+.recommended {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding: 10px;
+  text-align: center; 
+}
+  
+.gallery {
+  display: inline-block;
+  text-align: center;
+  margin: 2% 2%;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.gallery:hover img {
+  transform: scale(1.04);
+}
+
+.gallery p {
+  font-family: Calibri;
+  font-weight: bold;
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.recommended-image {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 340px;
+  max-height: 220px;
+}
+
+.motion {
+  width: 100%;
+  height: auto;
+}
+
+.motion a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+}
+
+.motion-box {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  align-items: center;
+  color: white; 
+  box-sizing: border-box; 
+  background: #222;
+}
+
+.comment {
+  max-width: 450px;
+  text-align: left;
+  color: #6c757d;
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 0.4rem;
+  font-family: Calibri;
+}
+
+.comment span {
+  color: #FFAC00;
+  cursor: pointer;
+}
+
+.comment span:hover {
+  color: #cc8a00;
+}
+
+.rating {
+  display: grid;
+  grid-template-columns: 150px 320px auto;
+}
+
+.star {
+  cursor: pointer;
+  display: inline-block;
+  color: #FFAC00;
+  margin: 0 1px;
+}
+
+.progress {
+  cursor: pointer;
+  width: 200px;
+  max-width: 200px;
+  background-color: #FFAC00;
+  border-radius: 30px;
+  border: 3px solid white;
+  margin-left: 2rem;
+  margin-top: 6px;
+  float: right;
+  padding: 5px;
+}
+
+.last-opinions {
+  box-sizing: border-box;
+  border: 1px solid #e5e7eb;
+  height: auto;
+  border-radius: 5px;
+  text-align: left;
+  line-height: 1.3rem;
+  text-indent: 10px;
+  margin-top: 10px;
+}
+
+.about-us {
+  box-sizing: border-box;
+  border: none;
+  margin-top: 5rem;
+  max-height: 24rem;
+  padding: 5rem 1rem;
+  background-image: url(https://www.futbolemotion.com/imagescontenidos/footer/index.jpg);
+  background-attachment: fixed;   /* The background image will not move as the user scrolls the page */
+}
+
+.about-us h1 {
+  font-weight: bold;
+  font-family: Verdana;
+  color: white;
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-family: Calibri;
+  color: white;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.brand {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  border: 1px solid #ced4da;
+  background-color: #f7f8f9;
+  font-size: 5rem;
+  height: 6.5rem;
+  padding: 0.7rem 2rem;
+  align-items: center;
+  justify-content: space-around; /* Space items evenly */
+}
+
+.brand a {
+  color: #6c757d;
+  display: inline;
+}
+.brand a:hover {
+  color: #495057;
+}
+
+.items {
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  background-color: #f7f8f9;
+  max-height: auto;
+  height: 300px;
+  padding: 0.7rem 1rem;
+}
+
+hr {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.link-hover:hover {
+  color: #d5d4da;
+  text-decoration: underline;
+  transition: all 0.2s ease-in;
+}
+
+.items a:hover {
+  text-decoration: underline;
+  transition: all 0.2s ease-in;
+}
+
+@media screen and (max-width: 570px) {
+  .bla {
+    display: flex;
+    flex-direction: column;
+  }
+  .motion img {
+    width: 100%; 
+    margin-bottom: 20px;
+  }
+  .Search {
+    width: 35%;
+    margin-left: 40px;
+  }
+  .form button {
+    position: absolute;
+    right: 18rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: 100%;
+    border: none;
+    opacity: 1;
+    transition: opacity 0.6s, transform 0.6s;
+    transition-delay: 0.5s;
+    pointer-events: none;
+  }
+  .header-button {
+    position: absolute;
+    right: 0.1rem;
+  }
+  .rating1{
+    margin-left: 20px;
+  }
+  .rating2 {
+    margin-right: 8px;
+  }
+  .items {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .recommended {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .option-container img {
+    display: none;
+  }
+  .vertical-align {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: left;
+    width: 100% ! important;
+  }
+  .row {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    height: 26rem;
+    width: 100% ! important;
+  }
+  .image {
+    max-width: 210px;
+    max-height: 270px;
+  }
+  .option-container img {
+    max-height: 300px;
+    max-width: 280px;
+  }
+  .caption {
+    max-width: 24rem;
+    padding: auto;;
+  }
+  .customer-review {
+    display: none;
+  }
+  .rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav {
+    display: none;
+  }
+}

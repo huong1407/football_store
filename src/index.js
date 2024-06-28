@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Login from './pages/Login';
-import Homepage from './pages/Homepage';
-import Footballboots from './pages/Footballboots/Footballboots';
-import Search from './pages/Search/Search';
+import Login from './components/Pages/Login';
+import Homepage from './components/Pages/Homepage';
+import Footballboots from './components/Pages/Footballboots';
+import Search from './components/Pages/Search';
 
 const router = createBrowserRouter([
   {

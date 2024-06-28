@@ -32,6 +32,7 @@
     border: none;
     height: 120rem;
     width: 82rem;
+    max-width: 82rem;
     margin-top: 10px;
     font-family: Calibri;
     font-size: 16px;
@@ -42,7 +43,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #eceef0;
-    width: 98%;
+    width: 100%;
     font-size: 4em;
     font-weight: 400;
     color: #0f0f0f;
@@ -51,6 +52,7 @@
     outline: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif serif;
 }
+
 .searching input:focus {
     border-bottom-color: #fac000;
     outline: none;
@@ -67,6 +69,7 @@
     cursor: pointer;
     color: #0f0f0f;
     opacity: 0.5;
+    z-index: 1;
 }
   
 .searching .search-icon {
@@ -131,4 +134,26 @@
     border-radius: 5px;
     width: 300px;
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 758px) {
+    .top-search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .search-page{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .top-search {
+        width: 100%;
+        grid-column: 1 / span 3;
+    }
+
+    .product {
+        grid-template-columns: repeat(3, auto);
+    }
 }

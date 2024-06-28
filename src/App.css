@@ -11,13 +11,6 @@
   pointer-events: none;
 }
 
-@media (min-width: 400px) {
-  .main {
-    width: 100% !important;
-    height: auto !important;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
